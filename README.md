@@ -8,3 +8,5 @@ Problem Statement
     Tell the Profit / Loss, the user's making -
         In Percentage
         In Absolute
+
+Access it on https://current-stocks-value.netlify.app/
