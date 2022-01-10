@@ -1,21 +1,21 @@
-let btn = document.querySelector('#btn');
+const btn = document.querySelector('#btn');
 
-function logic(e) {
-    let initialPrice = document.querySelector('#initialPriceId').value;
-    let quantity = document.querySelector('#quantityId').value;
-    let currentPrice = document.querySelector('#currentPriceId').value;
-    let output = document.querySelector('#output');
+const logic = (e) => {
+    const initialPrice = document.querySelector('#initialPriceId').value;
+    const quantity = document.querySelector('#quantityId').value;
+    const currentPrice = document.querySelector('#currentPriceId').value;
+    const output = document.querySelector('#output');
 
     console.log(initialPrice, quantity, currentPrice);
 
     if (initialPrice === '' || quantity === '' || currentPrice === '')
         output.innerText = 'Please check the entered fields!';
     else {
-        let initialValue = initialPrice * quantity;
-        let currentValue = currentPrice * quantity;
-        let profitOrLoss = Math.abs(currentValue - initialValue);
-        let profitOrLossPercentage = (profitOrLoss / initialValue) * 100;
-        // let loss = initialValue - currentValue;
+        const initialValue = initialPrice * quantity;
+        const currentValue = currentPrice * quantity;
+        const profitOrLoss = Math.abs(currentValue - initialValue);
+        const profitOrLossPercentage = (profitOrLoss / initialValue) * 100;
+        // const loss = initialValue - currentValue;
 
         if (initialValue === currentValue)
             output.innerText = 'No pain, no gain; AND no gain, no pain!';
@@ -36,6 +36,6 @@ function logic(e) {
                 profitOrLossPercentage +
                 '%';
     }
-}
+};
 
 btn.addEventListener('click', logic);
